@@ -1,0 +1,22 @@
+{
+    "name": "nagahshi/laziness-crud-generator",
+    "description": "php artisan command to generate repositories from lazy people",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Willian C. Klein",
+            "email": "willian.empari@gmail.com"
+        }
+     ],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": ">=5.0.0",
+        "prettus/l5-repository": "^2.5",
+        "illuminate/html": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LazyCrudGenerator\\": "src/"
+        }
+    }
+}
