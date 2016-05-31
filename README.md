@@ -1,21 +1,21 @@
-# laravel-crud-generator
+# lazy-crud-generator
 
-[![Latest Stable Version](https://poser.pugx.org/kepex/laravel-crud-generator/v/stable)](https://packagist.org/packages/kepex/laravel-crud-generator) [![Total Downloads](https://poser.pugx.org/kepex/laravel-crud-generator/downloads)](https://packagist.org/packages/kepex/laravel-crud-generator) [![Latest Unstable Version](https://poser.pugx.org/kepex/laravel-crud-generator/v/unstable)](https://packagist.org/packages/kepex/laravel-crud-generator) [![License](https://poser.pugx.org/kepex/laravel-crud-generator/license)](https://packagist.org/packages/kepex/laravel-crud-generator)
+[![Latest Stable Version](https://poser.pugx.org/nagahshi/lazy-crud-generator/v/stable)](https://packagist.org/packages/nagahshi/lazy-crud-generator) [![Total Downloads](https://poser.pugx.org/nagahshi/lazy-crud-generator/downloads)](https://packagist.org/packages/nagahshi/lazy-crud-generator) [![Latest Unstable Version](https://poser.pugx.org/nagahshi/lazy-crud-generator/v/unstable)](https://packagist.org/packages/nagahshi/lazy-crud-generator) [![License](https://poser.pugx.org/nagahshi/lazy-crud-generator/license)](https://packagist.org/packages/nagahshi/lazy-crud-generator)
 
-php artisan command to generate fully working crud with grid paginated server side only by having database tables
+based in kepex/laravel-crud-generator using prettus/l5-repository.
 
 
 ###Installing
 
-	php composer.phar require kepex/laravel-crud-generator
+	composer require nagahshi/lazy-crud-generator
 
 
 Add to config/app.php the following line to the 'providers' array:
 
-    CrudGenerator\CrudGeneratorServiceProvider::class,
+    LazyCrudGenerator\LazyCrudGeneratorServiceProvider::class,
 
 
-![Preview](https://raw.githubusercontent.com/kEpEx/laravel-crud-generator/master/preview.gif)
+![Preview](https://raw.githubusercontent.com/nagahshi/lazy-crud-generator/master/preview.gif)
 
 
 ###Usage
@@ -25,15 +25,15 @@ Use the desired model name as the input
 
 CRUD for students table
 
-	php artisan make:crud student
+	php artisan make:lazycrud student
 
 or the whole database
 
-	php artisan make:crud all
+	php artisan make:lazycrud all
 
 whole database with custom layout
 
-	php artisan make:crud all --master-layout=layouts.master 
+	php artisan make:lazycrud all --master-layout=layouts.master 
 
 Because sometimes you need boilerplate code only for view and controller, you can use an existing model with custom controller name
 
@@ -41,7 +41,7 @@ Because sometimes you need boilerplate code only for view and controller, you ca
 
 For more options 
 
-	php artisan help make:crud
+	php artisan help make:lazycrud
 
 ###Custom Templates
 
@@ -54,5 +54,3 @@ Run this command:
 and you will have now in resources/templates/ the files you need to modify
 
 If you want to go back to the default, just delete them
-
-Let me know if you have any questions or if you find this library useful at twitter @[kEpEx](https://twitter.com/kepex)
